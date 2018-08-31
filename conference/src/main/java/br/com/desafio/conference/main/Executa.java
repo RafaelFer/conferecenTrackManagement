@@ -19,9 +19,7 @@ public class Executa {
         List<String> listaEventos = LeArquivo.leArquivoRetornaListaString(caminhoArquivo);
 
         PalestraBuilder builder = new PalestraBuilder();
-
-        Palestra palestra = null;
-
+        
         List<Palestra> palestras = new ArrayList<Palestra>();
 
         for (String listaEvento : listaEventos) {
