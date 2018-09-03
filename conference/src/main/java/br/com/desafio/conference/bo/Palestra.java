@@ -1,9 +1,9 @@
-package br.com.desafio.conference.model;
+package br.com.desafio.conference.bo;
 
 /**
  * Created by user on 31/08/2018.
  */
-public class Palestra {
+public class Palestra implements Comparable<Palestra>{
 
     private String nome;
     private Long tempo;
@@ -36,5 +36,10 @@ public class Palestra {
                 "nome='" + nome + '\'' +
                 ", tempo=" + tempo +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Palestra o) {
+        return this.tempo.compareTo(o.getTempo());
     }
 }

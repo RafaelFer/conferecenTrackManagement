@@ -1,6 +1,6 @@
 package br.com.desafio.conference.builder;
 
-import br.com.desafio.conference.model.Palestra;
+import br.com.desafio.conference.bo.Palestra;
 
 /**
  * Created by user on 31/08/2018.
@@ -15,7 +15,9 @@ public class PalestraBuilder {
 
         if (possuiTempo) {
             Long tempo = new Long(linha.replaceAll("[^0-9]", ""));
-            palestra = new Palestra(linha.substring(0, linha.length() - 5),tempo);
+            palestra = new Palestra(linha,tempo);
+        }else{
+            palestra = new Palestra(linha,5L);
         }
 
         return palestra;
